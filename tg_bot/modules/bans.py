@@ -14,6 +14,8 @@ from tg_bot.modules.helper_funcs.extraction import extract_user_and_text
 from tg_bot.modules.helper_funcs.string_handling import extract_time
 from tg_bot.modules.log_channel import loggable
 
+from tg_bot.__main__ import STATS, USER_INFO
+
 
 @run_async
 @bot_admin

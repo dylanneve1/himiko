@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Optional, List
 
 import requests
-from telegram import Message, Chat, Update, Bot, MessageEntity
+from telegram import Message, Chat, Update, Bot, User, MessageEntity
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
@@ -135,7 +135,8 @@ GMAPS_TIME = "https://maps.googleapis.com/maps/api/timezone/json"
 
 @run_async
 def pepe(bot: Bot, update: Update):
-    message.reply_text("PEPE.")
+    update.effective_message.reply_text("I love Pepe")
+    bot.send_sticker(update.effective_chat.id, BAN_STICKER)
 
 
 @run_async
@@ -384,7 +385,7 @@ IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 
 TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 
-slap_handler = CommandHandler("pepe", pepe)
+PEPE_HANDLER = CommandHandler("pepe", pepe)
 
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
