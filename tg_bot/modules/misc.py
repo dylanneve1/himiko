@@ -395,7 +395,7 @@ IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 
 TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 
-SPAGET_HANDLER = CommandHandler("spaget", stfu)
+SPAGET_HANDLER = CommandHandler("spaget", spaget)
 STFU_HANDLER = CommandHandler("stfu", stfu)
 PEPE_HANDLER = CommandHandler("pepe", pepe)
 
