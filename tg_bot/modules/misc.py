@@ -134,6 +134,11 @@ GMAPS_TIME = "https://maps.googleapis.com/maps/api/timezone/json"
 
 
 @run_async
+def stfu(bot: Bot, update: Update):
+    bot.send_sticker(update.effective_chat.id, STFU_STICKER)
+
+
+@run_async
 def pepe(bot: Bot, update: Update):
     update.effective_message.reply_text("I love Pepe")
     bot.send_sticker(update.effective_chat.id, BAN_STICKER)
@@ -385,6 +390,7 @@ IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 
 TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 
+STFU_HANDLER = CommandHandler("stfu", stfu)
 PEPE_HANDLER = CommandHandler("pepe", pepe)
 
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
@@ -400,6 +406,7 @@ dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(TIME_HANDLER)
 dispatcher.add_handler(PEPE_HANDLER)
+dispatcher.add_handler(STFU_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(INFO_HANDLER)
