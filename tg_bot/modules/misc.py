@@ -134,6 +134,11 @@ GMAPS_TIME = "https://maps.googleapis.com/maps/api/timezone/json"
 
 
 @run_async
+def pepe(bot: Bot, update: Update):
+    message.reply_text("PEPE.")
+
+
+@run_async
 def runs(bot: Bot, update: Update):
     update.effective_message.reply_text(random.choice(RUN_STRINGS))
 
@@ -379,6 +384,8 @@ IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 
 TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 
+slap_handler = CommandHandler("pepe", pepe)
+
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
@@ -391,6 +398,7 @@ STATS_HANDLER = CommandHandler("stats", stats, filters=CustomFilters.sudo_filter
 dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(TIME_HANDLER)
+dispatcher.add_handler(PEPE_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(INFO_HANDLER)
