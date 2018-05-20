@@ -57,6 +57,7 @@ if ENV:
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADtwADYB_6Ci-ljuhGOm3PAg')
     CANNOTFINDBAN_STICKER = os.environ.get('CANNOTFINDBAN_STICKER', 'CAADAgADnQADYB_6Cm74rLoxg2cfAg')
+    STFU_STICKER = os.environ.get('STFU_STICKER', 'CAADAgADuAADYB_6CkF2_5GXFZ2BAg')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
 
 else:
@@ -99,6 +100,7 @@ else:
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
     CANNOTFINDBAN_STICKER = Config.CANNOTFINDBAN_STICKER
+    STFU_STICKER = Config.STFU_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
 
 
