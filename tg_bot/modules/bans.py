@@ -29,6 +29,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
 
     if not user_id:
         message.reply_text("You don't seem to be referring to a user.")
+        bot.send_sticker(chat.id, CANNOTFINDBAN_STICKER)
         return ""
 
     try:
