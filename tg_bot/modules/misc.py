@@ -10,7 +10,7 @@ from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER
+from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER, STFU_STICKER, SPAGET_STICKER
 from tg_bot.__main__ import STATS, USER_INFO
 from tg_bot.modules.disable import DisableAbleCommandHandler
 from tg_bot.modules.helper_funcs.extraction import extract_user
@@ -131,6 +131,11 @@ HIT = (
 
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 GMAPS_TIME = "https://maps.googleapis.com/maps/api/timezone/json"
+
+
+@run_async
+def spaget(bot: Bot, update: Update):
+    bot.send_sticker(update.effective_chat.id, SPAGET_STICKER)
 
 
 @run_async
@@ -390,6 +395,7 @@ IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 
 TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 
+SPAGET_HANDLER = CommandHandler("spaget", stfu)
 STFU_HANDLER = CommandHandler("stfu", stfu)
 PEPE_HANDLER = CommandHandler("pepe", pepe)
 
@@ -405,6 +411,7 @@ STATS_HANDLER = CommandHandler("stats", stats, filters=CustomFilters.sudo_filter
 dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(TIME_HANDLER)
+dispatcher.add_handler(SPAGET_HANDLER)
 dispatcher.add_handler(PEPE_HANDLER)
 dispatcher.add_handler(STFU_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)

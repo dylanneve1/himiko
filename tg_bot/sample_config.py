@@ -35,6 +35,7 @@ class Config(object):
     BAN_STICKER = 'CAADAgADtwADYB_6Ci-ljuhGOm3PAg'  # banhammer marie sticker
     CANNOTFINDBAN_STICKER = 'CAADAgADnQADYB_6Cm74rLoxg2cfAg'
     STFU_STICKER = 'CAADAgADuAADYB_6CkF2_5GXFZ2BAg'
+    SPAGET_STICKER = 'CAADAgAD6QADYB_6Csgh2TWRq0laAg'
     ALLOW_EXCL = False  # Allow ! commands as well as /
 
 
