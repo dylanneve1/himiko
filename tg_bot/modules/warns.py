@@ -27,8 +27,7 @@ CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
 # Not async
 def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-        message.reply_text("Do not try to warn an admin.")
-        message.reply_text("/warn")
+        message.reply_text("You cannot warn an admin.")
         return ""
 
     if warner:
