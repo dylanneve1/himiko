@@ -4,14 +4,12 @@ if not __name__.endswith("sample_config"):
           "values here. Doing that WILL backfire on you.\nBot quitting.", file=sys.stderr)
     quit(1)
 
-
-# Create a new config.py file in same dir and import, then extend this class.
-class Config(object):
+class Config(object): ## Real info is in sample config which is included in .gitignore for obvious reasons.
     LOGGER = True
 
     # REQUIRED
     API_KEY = "YOUR KEY HERE"
-    OWNER_ID = "YOUR ID HERE"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_ID = "YOUR ID HERE"
     OWNER_USERNAME = "YOUR USERNAME HERE"
 
     # RECOMMENDED
@@ -36,7 +34,7 @@ class Config(object):
     CANNOTFINDBAN_STICKER = 'CAADAgADnQADYB_6Cm74rLoxg2cfAg'
     STFU_STICKER = 'CAADAgADuAADYB_6CkF2_5GXFZ2BAg'
     SPAGET_STICKER = 'CAADAgAD6QADYB_6Csgh2TWRq0laAg'
-    ALLOW_EXCL = False  # Allow ! commands as well as /
+    ALLOW_EXCL = True  # Allow ! commands as well as /
 
 
 class Production(Config):
