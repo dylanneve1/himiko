@@ -30,7 +30,7 @@ class Config(object): ## Real info is in sample config which is included in .git
     DEL_CMDS = False  # Whether or not you should delete "blue text must click" commands
     STRICT_GBAN = False
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
-    BAN_STICKER = 'CAADAgADtwADYB_6Ci-ljuhGOm3PAg'  # banhammer marie sticker
+    BAN_STICKER = 'CAADAgADtwADYB_6Ci-ljuhGOm3PAg'  # banhammer himiko sticker
     CANNOTFINDBAN_STICKER = 'CAADAgADnQADYB_6Cm74rLoxg2cfAg'
     STFU_STICKER = 'CAADAgADuAADYB_6CkF2_5GXFZ2BAg'
     SPAGET_STICKER = 'CAADAgAD6QADYB_6Csgh2TWRq0laAg'
