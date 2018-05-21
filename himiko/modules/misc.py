@@ -140,6 +140,7 @@ def spaget(bot: Bot, update: Update):
 
 @run_async
 def stfu(bot: Bot, update: Update):
+    update.effective_message.reply_text("Please be quiet")
     bot.send_sticker(update.effective_chat.id, STFU_STICKER)
 
 
