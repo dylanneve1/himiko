@@ -5,9 +5,9 @@ from feedparser import parse
 from telegram import ParseMode, constants
 from telegram.ext import CommandHandler
 
-from tg_bot import dispatcher, updater
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.sql import rss_sql as sql
+from himiko import dispatcher, updater
+from himiko.modules.helper_funcs.chat_status import user_admin
+from himiko.modules.sql import rss_sql as sql
 
 
 def show_url(bot, update, args):

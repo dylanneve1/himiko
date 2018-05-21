@@ -8,14 +8,14 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from tg_bot import dispatcher, LOGGER
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.helper_funcs.extraction import extract_text
-from tg_bot.modules.helper_funcs.filters import CustomFilters
-from tg_bot.modules.helper_funcs.misc import build_keyboard
-from tg_bot.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
-from tg_bot.modules.sql import cust_filters_sql as sql
+from himiko import dispatcher, LOGGER
+from himiko.modules.disable import DisableAbleCommandHandler
+from himiko.modules.helper_funcs.chat_status import user_admin
+from himiko.modules.helper_funcs.extraction import extract_text
+from himiko.modules.helper_funcs.filters import CustomFilters
+from himiko.modules.helper_funcs.misc import build_keyboard
+from himiko.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
+from himiko.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 BASIC_FILTER_STRING = "*Filters in this chat:*\n"

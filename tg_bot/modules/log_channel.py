@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import Optional
 
-from tg_bot.modules.helper_funcs.misc import is_module_loaded
+from himiko.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -11,9 +11,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from tg_bot import dispatcher, LOGGER
-    from tg_bot.modules.helper_funcs.chat_status import user_admin
-    from tg_bot.modules.sql import log_channel_sql as sql
+    from himiko import dispatcher, LOGGER
+    from himiko.modules.helper_funcs.chat_status import user_admin
+    from himiko.modules.sql import log_channel_sql as sql
 
 
     def loggable(func):

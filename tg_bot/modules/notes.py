@@ -9,12 +9,12 @@ from telegram.ext import CommandHandler, RegexHandler, Filters
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown
 
-import tg_bot.modules.sql.notes_sql as sql
-from tg_bot import dispatcher, MESSAGE_DUMP, LOGGER
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.helper_funcs.misc import build_keyboard
-from tg_bot.modules.helper_funcs.msg_types import get_note_type
+import himiko.modules.sql.notes_sql as sql
+from himiko import dispatcher, MESSAGE_DUMP, LOGGER
+from himiko.modules.disable import DisableAbleCommandHandler
+from himiko.modules.helper_funcs.chat_status import user_admin
+from himiko.modules.helper_funcs.misc import build_keyboard
+from himiko.modules.helper_funcs.msg_types import get_note_type
 
 FILE_MATCHER = re.compile(r"^###file_id(!photo)?###:(.*?)(?:\s|$)")
 

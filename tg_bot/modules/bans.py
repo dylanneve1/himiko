@@ -6,15 +6,15 @@ from telegram.error import BadRequest
 from telegram.ext import run_async, CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
-from tg_bot import dispatcher, BAN_STICKER, CANNOTFINDBAN_STICKER, LOGGER
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import bot_admin, user_admin, is_user_ban_protected, can_restrict, \
+from himiko import dispatcher, BAN_STICKER, CANNOTFINDBAN_STICKER, LOGGER
+from himiko.modules.disable import DisableAbleCommandHandler
+from himiko.modules.helper_funcs.chat_status import bot_admin, user_admin, is_user_ban_protected, can_restrict, \
     is_user_admin, is_user_in_chat
-from tg_bot.modules.helper_funcs.extraction import extract_user_and_text
-from tg_bot.modules.helper_funcs.string_handling import extract_time
-from tg_bot.modules.log_channel import loggable
+from himiko.modules.helper_funcs.extraction import extract_user_and_text
+from himiko.modules.helper_funcs.string_handling import extract_time
+from himiko.modules.log_channel import loggable
 
-from tg_bot.__main__ import STATS, USER_INFO
+from himiko.__main__ import STATS, USER_INFO
 
 
 @run_async
