@@ -9,5 +9,3 @@ Can be found on telegram as [Himiko](https://t.me/Himiko_bot).
 I am moderating a [channel](https://t.me/Himiko_channel).
 
 Alternatively, [find me on telegram](https://t.me/dylanneve1)!
-
-TEST
