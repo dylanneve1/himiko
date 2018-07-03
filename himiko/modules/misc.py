@@ -86,6 +86,7 @@ ITEMS = (
     "Galaxy S7",
     "VoLTE fix",
     "Galaxy S9",
+	"Jio SIM",
 )
 
 THROW = (
