@@ -43,7 +43,7 @@ def set_afk(user_id, reason=""):
         if not curr:
 			curr = AFK(user_id, reason, True)
         else:
-            curr.is_afk = True
+			curr.is_afk = True
 			curr.reason = reason
 
         AFK_USERS[user_id] = reason
