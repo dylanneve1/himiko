@@ -465,9 +465,9 @@ def process_update(self, update):
         cnt = 0
     else:
         cnt += 1
-     if cnt > 10:
+    if cnt > 10:
         return
-     CHATS_CNT[update.effective_chat.id] = cnt
+    CHATS_CNT[update.effective_chat.id] = cnt
     for group in self.groups:
         try:
             for handler in (x for x in self.handlers[group] if x.check_update(update)):
