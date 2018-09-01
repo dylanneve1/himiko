@@ -40,8 +40,8 @@ def no_longer_afk(bot: Bot, update: Update):
 @run_async
 def reply_afk(bot: Bot, update: Update):
     message = update.effective_message  # type: Optional[Message]
-    entities = message.parse_entities([MessageEntity.TEXT_MENTION, MessageEntity.MENTION])
-    if message.entities and entities:
+    if message.entities and message.parse_entities([MessageEntity.TEXT_MENTION, MessageEntity.MENTION]):
+        entities = message.parse_entities([MessageEntity.TEXT_MENTION, MessageEntity.MENTION])
         for ent in entities:
             if ent.type == MessageEntity.TEXT_MENTION:
                 user_id = ent.user.id
@@ -59,13 +59,12 @@ def reply_afk(bot: Bot, update: Update):
                 return
 
             if sql.is_afk(user_id):
-                valid, reason = sql.check_afk_status(user_id)
-                if valid:
-                    if not reason:
-                        res = "{} is AFK!".format(fst_name)
-                    else:
-                        res = "{} is AFK! says its because of:\n{}".format(fst_name, reason)
-                    message.reply_text(res)
+                user = sql.check_afk_status(user_id)
+                if not user.reason:
+                    res = "{} is AFK!".format(fst_name)
+                else:
+                    res = "{} is AFK! says its because of:\n{}".format(fst_name, user.reason)
+                message.reply_text(res)
 
 
 __help__ = """

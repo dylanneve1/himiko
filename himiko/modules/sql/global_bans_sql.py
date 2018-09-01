@@ -65,14 +65,13 @@ def update_gban_reason(user_id, name, reason=None):
     with GBANNED_USERS_LOCK:
         user = SESSION.query(GloballyBannedUsers).get(user_id)
         if not user:
-            return None
-		old_reason = user.reason
+            return False
         user.name = name
         user.reason = reason
 
         SESSION.merge(user)
         SESSION.commit()
-        return old_reason
+        return True
 
 
 def ungban_user(user_id):
