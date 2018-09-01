@@ -480,7 +480,7 @@ def process_update(self, update):
          # Dispatch any error.
         except TelegramError as te:
             self.logger.warning('A TelegramError was raised while processing the Update')
-            try:
+             try:
                 self.dispatch_error(update, te)
             except DispatcherHandlerStop:
                 self.logger.debug('Error handler stopped further handlers')
