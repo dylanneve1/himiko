@@ -41,7 +41,7 @@ def set_afk(user_id, reason=""):
     with INSERTION_LOCK:
         curr = SESSION.query(AFK).get(user_id)
         if not curr:
-            curr = AFK(user_id, reason, True)
+			curr = AFK(user_id, reason, True)
         else:
             curr.is_afk = True
 			curr.reason = reason
